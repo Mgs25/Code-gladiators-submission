@@ -10,7 +10,7 @@
 /*         num - value to push on the stack                           */
 /* action: get a link to hold the pushed value, push link on stack    */
 /*                                                                    */
-void push(IntStack* stk, const int num) {                                   // Improved const-correctness, number is not modified in push function
+void push(IntStack* stk, const int num) {                                   // Improved const-correctness, num is not modified in push function
     IntLink* ptr;
     ptr       = (IntLink*)malloc(sizeof(IntLink));                          // Replaced illegal character '-', '/' with
     ptr->i    = num;
