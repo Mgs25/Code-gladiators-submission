@@ -6,7 +6,7 @@
 
 /*-----------------------------------------------------------*/
 /* OVERALL CHANGES IN THE PROJECT                            */
-/* -> renamed calc.c to main.c to avoid linker errors        */
+/* -> fixed linker errors                                    */
 /* -> Spacing in snippets to improve readability             */
 /* -> Changed bracket style (personal preference)            */
 /* -> Fixed illegal characters (⁄, –) (Not in character set) */
