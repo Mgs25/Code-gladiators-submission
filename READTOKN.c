@@ -50,7 +50,7 @@ const Token read_token(char buf[]) {
   char c;
   
   /* skip leading white space */
-  c = nextchar();                                                       // Replaces for() loop with while() to improve readabiltiy
+  c = nextchar();                                                       // Replaced for() loop with while() to improve readabiltiy
   while (c == ' ')
       c = nextchar();
   
