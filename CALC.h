@@ -8,6 +8,11 @@
 #define _CALC_H_                                                // entities in CALC.h will not be defined more than once
 // Header guards
 
+/*--------------------------------------------------------------------*/
+/* CHANGES IN "CALC.h"                                                */
+/* Added header guards to prevent multiple declaration of methods     */
+/*--------------------------------------------------------------------*/
+
 typedef enum toks {
     T_INTEGER,
     T_PLUS,
@@ -18,7 +23,7 @@ typedef enum toks {
     T_STOP
 } Token;
 
-Token read_token(char buf[]);                             // read_token prototype
+Token read_token(char buf[]);
 
 typedef struct int_link  {
     struct int_link* next;
