@@ -2,9 +2,11 @@
 /*                                                                    */
 /* A function to read input and tokenize it for a simple calculator   */
 /*--------------------------------------------------------------------*/
-#include "calc.h"
+
 #include <ctype.h>
 #include <stdio.h>
+#include "calc.h"
+
 /*--------------------------------------------------------------------*/
 /* action: get next input char, update index for next call            */
 /* return: next input char                                            */
