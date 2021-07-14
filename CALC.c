@@ -8,13 +8,12 @@
  -> renamed calc.c to main.c to avoid linker errors
  -> Spacing in snippets to improve readability
  -> Changed bracket style (personal preference)
- -> Added const-correctness
  -> Fixed illegal characters (⁄, –) (Not in character set)
 ******************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "CALC.h"
+#include "calc.h"
 
 IntStack stack = {0};
 
