@@ -2,8 +2,9 @@
 /*                                                                    */
 /* A push and pop function for a stack of integers                    */
 /*--------------------------------------------------------------------*/
-#include "calc.h"
+
 #include <stdlib.h>
+#include "calc.h"
 
 /*--------------------------------------------------------------------*/
 /* input:  stk - stack of integers                                    */
