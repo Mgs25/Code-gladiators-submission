@@ -4,12 +4,20 @@
 /* are pushed and popped on a stack                                   */
 /*--------------------------------------------------------------------*/
 
-/*****************************************************
- -> renamed calc.c to main.c to avoid linker errors
- -> Spacing in snippets to improve readability
- -> Changed bracket style (personal preference)
- -> Fixed illegal characters (⁄, –) (Not in character set)
-******************************************************/
+/*-----------------------------------------------------------*/
+/* OVERALL CHANGES IN THE PROJECT                            */
+/* -> renamed calc.c to main.c to avoid linker errors        */
+/* -> Spacing in snippets to improve readability             */
+/* -> Changed bracket style (personal preference)            */
+/* -> Fixed illegal characters (⁄, –) (Not in character set) */
+/*-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------*/
+/* CHANGES MADE IN "CALC.c"                                  */
+/* Added return type to non void returning main function     */
+/* Change for(;;) to while(1) for readability                */
+/*-----------------------------------------------------------*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
