@@ -10,7 +10,14 @@
 /* return: next input char                                            */
 /*--------------------------------------------------------------------*/
 
-static char nextchar() {                                          // Removed void parameter to maintain consistency
+/*--------------------------------------------------------------------*/
+/* CHANGES MADE IN "READTOKN.c"                                       */
+/* Changed all occurences of ' ' to ' ', as ' ' is a illegal character*/
+/* Change char* to const char* (string)                               */
+/* Replaced 'for loop' with 'while loop' to avoid bad practice        */
+/*--------------------------------------------------------------------*/
+
+static char nextchar() {                                                  // Removed void parameter to maintain consistency
 /*--------------------------------------------------------------------*/
 /* input  action:                                                     */
 /*    2      push 2 on stack                                          */
@@ -54,7 +61,7 @@ Token read_token(char buf[]) {
     while (c == ' ')
         c = nextchar();
 
-    buf[0] = c;  /* get ready to return single char e.g."+" */
+    buf[0] = c;  /* get ready to return single char e.g."+" */            
     buf[1] = 0;
 
     switch(c) {
