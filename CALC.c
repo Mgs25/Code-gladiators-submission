@@ -16,6 +16,7 @@
 /* CHANGES MADE IN "CALC.c"                                  */
 /* -> Added return type to non void returning main function  */
 /* -> Change for(;;) to while(1) for readability             */
+/* -> Added puts(buffer) to print the result to output stream*/
 /*-----------------------------------------------------------*/
 
 
@@ -31,7 +32,7 @@ int main() {                                                // Added integer ret
   char buf_out[100];
   int num, num2;
   
-  while(1) {                                             // Changed (;;) to while(1) [preference]
+  while(1) {                                                // Changed (;;) to while(1) [preference]
     tok = read_token(word);
     
     switch(tok) {
@@ -59,7 +60,7 @@ int main() {                                                // Added integer ret
       case T_EQUALS:
         num = pop(&stack);
         sprintf(buf_out, "= %d ",num);
-        puts(buf_out);
+        puts(buf_out);                                      // Added the missing puts(buf_out) to print the result (element on top)
         push(&stack, num);
     }
     
