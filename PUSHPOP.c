@@ -13,7 +13,7 @@
 
 /*--------------------------------------------------------------------*/
 /* CHANGES IN "PUSHPOP.c"                                             */
-/* -> changed push function's num parameter from int to const int  */
+/* -> changed push function's num parameter from int to const int     */
 /*    as the integer is constant in the push function                 */
 /* -> Replaced all occurrences of illegal '–' and '⁄' with '-' and '/'*/
 /*    respectively, to avoid stray errors                             */
