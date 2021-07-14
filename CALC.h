@@ -10,7 +10,7 @@
 
 /*--------------------------------------------------------------------*/
 /* CHANGES IN "CALC.h"                                                */
-/* Added header guards to prevent multiple declaration of methods     */
+/* Added header guards to prevent multiple definition of methods     */
 /*--------------------------------------------------------------------*/
 
 typedef enum toks {
