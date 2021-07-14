@@ -18,7 +18,7 @@ typedef enum toks {
     T_STOP
 } Token;
 
-Token read_token(char buf[]);                             // read_token prototype, added const-correctness
+Token read_token(char buf[]);                             // read_token prototype
 
 typedef struct int_link  {
     struct int_link* next;
@@ -29,7 +29,7 @@ typedef struct int_stack {
     IntLink* top;
 } IntStack;
 
-extern void push(IntStack* , int);                    // Improved const-correctness, number is not modified in push function
-extern int pop(IntStack*);                            // Returned integer is not modified
+extern void push(IntStack* , int);                    
+extern int pop(IntStack*);                         
 
 #endif
