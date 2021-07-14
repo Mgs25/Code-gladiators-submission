@@ -1,35 +1,62 @@
-/*----- FILE CALC.H --------------------------------------------------*/
+/*----- FILE CALC.C --------------------------------------------------*/
 /*                                                                    */
-/* Header file for CALC.C PUSHPOP.C READTOKN.C                        */
-/* a simple calculator                                                */
+/* A simple calculator that does operations on integers that          */
+/* are pushed and popped on a stack                                   */
 /*--------------------------------------------------------------------*/
 
-#ifndef _CALC_H_                                                // Added header guards to prevent multiple definition
-#define _CALC_H_                                                // entities in CALC.h will not be defined more than once
-// Header guards
+/*****************************************************
+ -> renamed calc.c to main.c to avoid linker errors
+ -> Spacing in snippets to improve readability
+ -> Changed bracket style (personal preference)
+ -> Fixed illegal characters (⁄, –) (Not in character set)
+******************************************************/
 
-typedef enum toks {
-  T_INTEGER,
-  T_PLUS,
-  T_TIMES,
-  T_MINUS,
-  T_DIVIDE,
-  T_EQUALS,
-  T_STOP
-} Token;
+#include <stdio.h>
+#include <stdlib.h>
+#include "calc.h"
 
-const Token read_token(char buf[]);                             // read_token prototype, added const-correctness
+IntStack stack = {0};
 
-typedef struct int_link  {
-  struct int_link* next;
-  int i;
-} IntLink;
-
-typedef struct int_stack {
-  IntLink* top;
-} IntStack;
-
-extern void push(IntStack* , const int);                    // Improved const-correctness, number is not modified in push function
-extern const int pop(IntStack*);                            // Returned integer is not modified
-
-#endif
+int main() {                                                // Added integer return type to main which is returning 0.
+  Token tok;
+  char word[100];
+  char buf_out[100];
+  int num, num2;
+  
+  while(1) {                                             // Changed (;;) to while(1) [preference]
+    tok = read_token(word);
+    
+    switch(tok) {
+      case T_STOP:
+        break;
+      case T_INTEGER:
+        num = atoi(word);
+        push(&stack, num);    
+        break;
+      case T_PLUS:
+        push(&stack, pop(&stack) + pop(&stack));
+        break;
+      case T_MINUS:
+        num = pop(&stack);
+        push(&stack, num - pop(&stack));
+        break;
+      case T_TIMES:
+        push(&stack, pop(&stack) * pop(&stack));
+        break;
+      case T_DIVIDE:
+        num2 = pop(&stack);
+        num = pop(&stack);
+        push(&stack, num/num2);   
+        break;
+      case T_EQUALS:
+        num = pop(&stack);
+        sprintf(buf_out, "= %d ",num);
+        puts(buf_out);
+        push(&stack, num);
+    }
+    
+    if (tok == T_STOP)
+      break;
+  }
+  return 0;
+}
