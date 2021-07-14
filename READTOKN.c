@@ -12,7 +12,7 @@
 
 /*--------------------------------------------------------------------*/
 /* CHANGES MADE IN "READTOKN.c"                                       */
-/* Changed all occurences of ' ' to ' ', as ' ' is a illegal character*/
+/* Changed all occurences of '⁄' to '/', as '⁄' is a illegal character*/
 /* Change char* to const char* (string)                               */
 /* Replaced 'for loop' with 'while loop' to avoid bad practice        */
 /*--------------------------------------------------------------------*/
