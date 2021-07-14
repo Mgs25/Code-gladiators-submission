@@ -6,7 +6,7 @@
 
 /*-----------------------------------------------------------*/
 /* OVERALL CHANGES IN THE PROJECT                            */
-/* -> fixed linker errors                                    */
+/* -> Fixed linker errors                                    */
 /* -> Spacing in snippets to improve readability             */
 /* -> Changed bracket style (personal preference)            */
 /* -> Fixed illegal characters (⁄, –) (Not in character set) */
