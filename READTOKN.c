@@ -14,9 +14,11 @@
 
 /*--------------------------------------------------------------------*/
 /* CHANGES MADE IN "READTOKN.c"                                       */
-/* Changed all occurences of '⁄' to '/', as '⁄' is a illegal character*/
-/* Change char* to const char* (string)                               */
-/* Replaced 'for loop' with 'while loop' to avoid bad practice        */
+/* -> Changed all occurences of '⁄' to '/',                           */
+/*     as '⁄' is a illegal character                                  */
+/* -> Change char* to const char* (string)                            */
+/* -> Removed void parameter to main consistency                      */
+/* -> Replaced 'for loop' with 'while loop' to avoid bad practice     */
 /*--------------------------------------------------------------------*/
 
 static char nextchar() {                                                  // Removed void parameter to maintain consistency
@@ -31,8 +33,9 @@ static char nextchar() {                                                  // Rem
 /*    =      output value on the top of the stack (4)                 */
 /*--------------------------------------------------------------------*/
 
-    const char* buf_in  = "2 18 + = 5 / ="; // Input buffer               // Modified char* buf_in to const char* buf_in, to avoid problematic conversion
-    // from string constant (const char*) to char*
+    // Input buffer 
+    const char* buf_in  = "2 18 + = 5 / =";                               // Modified char* buf_in to const char* buf_in, to avoid problematic conversion
+                                                                          // from string constant (const char*) to char*
 
     /********************* Testing *******************************/
     /* const char* buf_in  = "2 18 + = 5 / = 80 80 + = 40 + =" */
