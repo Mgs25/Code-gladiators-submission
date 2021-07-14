@@ -14,8 +14,8 @@
 
 /*-----------------------------------------------------------*/
 /* CHANGES MADE IN "CALC.c"                                  */
-/* Added return type to non void returning main function     */
-/* Change for(;;) to while(1) for readability                */
+/* -> Added return type to non void returning main function  */
+/* -> Change for(;;) to while(1) for readability             */
 /*-----------------------------------------------------------*/
 
 
