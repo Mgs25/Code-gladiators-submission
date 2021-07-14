@@ -4,6 +4,14 @@
 /* are pushed and popped on a stack                                   */
 /*--------------------------------------------------------------------*/
 
+/************* NOTE *************/
+/* Program tested on
+/* Online GDB Debugger
+/* CodeLite GNU GCC 9
+/* Dev C++
+/* Code::Blocks
+/********************************/
+
 /*-----------------------------------------------------------*/
 /* OVERALL CHANGES IN THE PROJECT                            */
 /* -> Fixed linker errors                                    */
